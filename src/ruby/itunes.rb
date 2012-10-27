@@ -6,7 +6,7 @@ class ITunes
 
   def initialize (path=nil)
     @path = path.nil? \
-      ? (Dir::home + '/Music/iTunes/iTunes Music Library.xml') \
+      ? File.join(Dir::home, '/Music/iTunes/iTunes Music Library.xml') \
       : path
 
     parse
